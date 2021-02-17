@@ -1,0 +1,15 @@
+---
+application:
+  name: "hirros-n8n"
+  project: "hirros-n8n"
+  organization: "QoveryCommunity"
+databases:
+- type: "POSTGRESQL"
+  name: "n8n"
+  version: "11"
+routers:
+- name: "main-hirros-n8n"
+  routes:
+  - application_name: "hirros-n8n"
+    paths:
+    - "/*"
