@@ -3,13 +3,14 @@ application:
   name: "hirros-n8n"
   project: "hirros-n8n"
   organization: "QoveryCommunity"
+  dockerfile: docker/images/n8n-custom/Dockerfile
 databases:
-- type: "POSTGRESQL"
-  name: "n8n"
-  version: "11"
+  - type: "POSTGRESQL"
+    name: "n8n"
+    version: "11"
 routers:
-- name: "main-hirros-n8n"
-  routes:
-  - application_name: "hirros-n8n"
-    paths:
-    - "/*"
+  - name: "main-hirros-n8n"
+    routes:
+      - application_name: "hirros-n8n"
+        paths:
+          - "/*"
